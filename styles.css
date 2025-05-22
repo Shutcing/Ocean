@@ -34,7 +34,7 @@
 
 /* Inter Display - Medium (500) */
 @font-face {
-  font-family: "Inter Display";
+  font-family: "Inter Display Medium";
   src: url("fonts/InterDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -60,7 +60,7 @@
 :root {
   --color-black: #262626;
   --color-black-opacity: #262626cc;
-  --indent: 42%;
+  --indent: 43%;
 }
 
 /*-------ОБНУЛЕНИЕ------------------------------*/
@@ -116,7 +116,7 @@ a:hover {
 
 .wrapper {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 128%;
   color: var(--color-black);
 }
@@ -125,6 +125,7 @@ a:hover {
   margin: 0 auto;
   padding: 0 32px;
   box-sizing: content-box;
+  max-width: 100%;
 }
 
 /*--Header-----------------------------------*/
@@ -177,7 +178,7 @@ a:hover {
 }
 
 .main__title {
-  font-size: 75px;
+  font-size: 80px;
   line-height: 100%;
   margin-left: var(--indent);
 }
@@ -188,6 +189,7 @@ a:hover {
 }
 
 .works__container {
+  margin-top: calc(152px - 32px);
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -248,7 +250,7 @@ a:hover {
 }
 
 .info {
-  padding: 120px 0;
+  padding: 102px 0;
 }
 
 .info__container {
@@ -267,7 +269,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: 35px;
+  font-size: 40px;
   line-height: 90%;
 }
 
@@ -343,11 +345,18 @@ a:hover {
 }
 
 .footer__title {
-  margin-top: 10%;
-  font-size: 175px;
+  margin-top: 8.2%;
+  white-space: nowrap;
+  width: fit-content;
+  line-height: 105%;
+  font-family: "Inter Display Medium";
+  src: url("fonts/InterDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
-  line-height: 100%;
+  font-style: normal;
+  letter-spacing: -5px;
+  line-height: 90px;
 }
+
 .footer__rules {
   display: flex;
   justify-content: start;
@@ -425,8 +434,8 @@ a:hover {
 /*------Media Queries-----------------*/
 @media (max-width: 1150px) {
   .main__explore {
+    margin-left: auto;
     order: 2;
-    margin-left: var(--indent);
   }
 
   .main__title {
@@ -471,8 +480,13 @@ a:hover {
     margin-top: 40px;
   }
 
+  .main__explore {
+    text-align: end;
+  }
+
   .works__container {
     flex-direction: column;
+    margin-top: calc(60px - 20px);
   }
 
   .work {
@@ -481,7 +495,7 @@ a:hover {
   }
 
   .work__wrapper {
-    height: 30vh;
+    height: 47vh;
   }
 
   .info__block {
