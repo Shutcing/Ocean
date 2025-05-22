@@ -1,5 +1,7 @@
 const logoWidth = `${document.querySelector(".header__logo").clientWidth}px`;
 document.querySelector(".main__explore").style.minWidth = logoWidth;
+document.querySelector(".contact__time").style.width = logoWidth;
+document.querySelector(".rules__copyright").style.width = logoWidth;
 document
   .querySelectorAll(".info__block-title")
   .forEach((item) => (item.style.minWidth = logoWidth));
