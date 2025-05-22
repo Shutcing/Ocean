@@ -6,11 +6,13 @@ document
   .querySelectorAll(".info__block-title")
   .forEach((item) => (item.style.minWidth = logoWidth));
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const burgerMenu = document.querySelector(".burger-menu");
-//   const navList = document.querySelector(".nav__list");
+document.addEventListener("DOMContentLoaded", function () {
+  const burgerMenu = document.querySelector(".burger-menu");
+  const mobileMenu = document.querySelector(".mobile-menu-curtain");
 
-//   burgerMenu.addEventListener("click", function () {
-//     navList.classList.toggle("nav__list--active");
-//   });
-// });
+  burgerMenu.addEventListener("click", function () {
+    mobileMenu.classList.toggle("mobile-menu--active");
+
+    this.classList.toggle("burger--active");
+  });
+});
