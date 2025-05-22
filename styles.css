@@ -1,3 +1,61 @@
+/*--Font------------------------------------*/
+
+/* Inter Display - Thin (100) */
+@font-face {
+  font-family: "Inter Display";
+  src: url("fonts/InterDisplay-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Inter Display - ExtraLight (200) */
+@font-face {
+  font-family: "Inter Display";
+  src: url("fonts/InterDisplay-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Inter Display - Light (300) */
+@font-face {
+  font-family: "Inter Display";
+  src: url("fonts/InterDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Inter Display - Regular (400) */
+@font-face {
+  font-family: "Inter Display";
+  src: url("fonts/InterDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Inter Display - Medium (500) */
+@font-face {
+  font-family: "Inter Display";
+  src: url("fonts/InterDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Inter Display - SemiBold (600) */
+@font-face {
+  font-family: "Inter Display";
+  src: url("fonts/InterDisplay-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Inter Display - Bold (700) */
+@font-face {
+  font-family: "Inter Display";
+  src: url("fonts/InterDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 /*------Color Variables-----------------*/
 :root {
   --color-black: #262626;
@@ -39,7 +97,7 @@ body {
   line-height: 1;
   font-size: 16px;
   color: black;
-  font-family: "Inter";
+  font-family: "Inter Display", sans-serif;
   color: var(--color-black);
 }
 
@@ -47,7 +105,7 @@ body {
 
 .wrapper {
   font-weight: 400;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 128%;
   color: var(--color-black);
 }
@@ -108,7 +166,7 @@ body {
 }
 
 .main__title {
-  font-size: 80px;
+  font-size: 75px;
   line-height: 100%;
   margin-left: 42%;
 }
@@ -157,6 +215,15 @@ body {
 }
 
 /*--Info---------------------------------------*/
+.grayLine {
+  height: 1.5px;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0.5;
+  background: var(--color-black);
+  transform: translateY(40px);
+}
+
 .info {
   padding: 120px 0;
 }
@@ -178,11 +245,15 @@ body {
   flex-direction: column;
   gap: 10px;
   font-size: 35px;
+  line-height: 90%;
 }
 
 .info__block-desc {
   margin-left: 42%;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .info__block.about .info__block-desc .desc-3 {
@@ -195,12 +266,13 @@ body {
 
 /*---Contact--------------------------------*/
 .contact {
-}
-
-.contact__container {
+  display: flex;
+  justify-content: start;
 }
 
 .contact__time {
+  overflow: visible;
+  white-space: nowrap;
 }
 
 .contact__time-title {
@@ -210,6 +282,8 @@ body {
 }
 
 .contact__address {
+  margin-left: 42%;
+  white-space: nowrap;
 }
 
 .contact__address-street {
@@ -218,12 +292,53 @@ body {
 .contact__address-city {
 }
 
+.contact__social {
+  display: flex;
+  width: 100%;
+}
+
 .contact__social-title {
+  margin-left: 40%;
 }
 
 .contact__social-list {
+  margin-left: auto;
 }
 
+/*--Footer--------------------------------*/
+.footer {
+  padding-bottom: 32px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__title {
+  margin-top: 10%;
+  font-size: 175px;
+  font-weight: 500;
+  line-height: 100%;
+}
+.footer__rules {
+  display: flex;
+  justify-content: start;
+}
+.rules {
+}
+
+.rules__copyright {
+  white-space: nowrap;
+}
+
+.rules__docs {
+  margin-left: 42%;
+  display: flex;
+}
 /*------Media Queries-----------------*/
 @media (max-width: 768px) {
 }
