@@ -32,6 +32,7 @@ function adjustFontSize(element) {
   }
 }
 
+// Пример вызова для элемента с id="myText"
 setInterval(() =>
   adjustFontSize(document.querySelector(".footer__title"), 1500)
 );
